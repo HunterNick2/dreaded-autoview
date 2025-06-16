@@ -88,7 +88,7 @@ module.exports = main = async (client, m, chatUpdate) => {
     }
 
     
-    if (/^(uhm|wow|nice|🙂)/i.test(budy) && m.quoted) {
+    if (/^(oohmy|wow|nice|🤭|🙂)/i.test(budy) && m.quoted) {
   
       if (quotedMessage?.imageMessage) {
         let imageCaption = quotedMessage.imageMessage.caption || "";
