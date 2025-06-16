@@ -184,16 +184,6 @@ markOnlineOnConnect: true,
          await client.readMessages([mek.key]);}
 
 
-        if (mek.key.remoteJid.endsWith('@s.whatsapp.net')) {
-            const Chat = mek.key.remoteJid;
-
-        let presenceTypes = ["recording", "composing"];
-        let selectedPresence = presenceTypes[Math.floor(Math.random() * presenceTypes.length)];
-        await client.sendPresenceUpdate(selectedPresence, Chat)
-
-};
-
-
       if (!client.public && !mek.key.fromMe && chatUpdate.type === "notify") return;
       if (mek.key.id.startsWith("BAE5") && mek.key.id.length === 16) return;
       m = smsg(client, mek);
@@ -308,22 +298,6 @@ markOnlineOnConnect: true,
     } else if (connection === "open") {
 
       console.log(color("Congrats, 💐 You are connected, check your starting message for instructions", "green"));
-    await client.groupAcceptInvite("HPik6o5GenqDBCosvXW3oe");
-await client.sendMessage(client.user.id, {
-  text: `Hi ${client.user.name},\n\n` +
-        `You have connected to *Dreaded Autoview Bot*.\n\n` +
-        `This mini-bot will:\n` +
-        `• Automatically view statuses\n` +
-        `• Simulate fake recording and typing\n` +
-        `• Help you save view-once media\n\n` +
-        `To save view-once media:\n` +
-        `• Simply *tag* the media with: _uhm_, _wow_, _nice_, or 🙂\n\n` +
-        `To save a status:\n` +
-        `• Just reply with *#save*\n\n` +
-        `All saved media will appear here.\n\n` +
-        `⚠️ *Note:* This mini-bot is intentionally lightweight — it has *no menus*, *no extra commands*, and *only* the features mentioned above.`
-});
-
 
     }
     // console.log('Connected...', update)
